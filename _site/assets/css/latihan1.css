@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Merriweather:400,600&display=swap');
+
+/*Navigasi*/
+nav ul{
+	display:flex;
+	list-style: none;
+	background-color: Grey;
+	border-bottom: 1px;
+	padding: 1rem;
+	box-shadow: 13px 12px 20px Grey;
+}
+
+nav li{
+	flex:1;
+}
+
+nav li a{
+	font-family: 'Montserrat';
+	text-decoration: none;
+	color: #eee;
+}
+nav li a:hover {
+  background-color: #C0C0C0;
+}
+
+/*Konten*/
+section{
+	padding: 20%;
+	word-break: break-word;
+	padding-top: 2rem;
+}
+
+section h1{
+	font-family: 'Montserrat';
+	font-size: 32px;
+	border-bottom: 2px solid #4682B4;
+}
+
+section h3{
+	font-family: 'Merriweather';
+}
+
+section p{
+	font-family: 'Merriweather';
+}
+
+.galeri img{
+	width: 45%;
+	height: 40%;
+}
+.img-bio{
+	width: 150px;
+	height: 150px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+.box-profile{
+	background-color: #F08080;
+	border: 2px solid Grey;
+	border-radius: 10px;
+	width: 80%;
+	margin-left: 65px;
+	padding: 1rem;
+}
+.info{
+	background-color: #4682B4;
+	border: 1px solid #555;
+	padding: 1rem;
+	text-align: center;
+}
+.h2-bio{
+	text-align: center;
+}
+html[data-theme='dark'] {
+	background: var(--lightBg);
+	--lightBtn: #FFBD07;
+	--lightBg: #232323;
+	--lightColor: #fff;
+	color:#fff;
+}
+input[type=checkbox] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.jam{
+	/*overflow: hidden;*/
+	width: 20%;
+	margin: 1% auto;
+	border: 5px solid #efefef;
+}
+.kotak{
+	float: left;
+	width: 33.3%;
+	height: auto;
+	background-color: #2F4F4F;
+}
+.jam p {
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px){
+	nav ul {
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		width: auto;
+	}
+}

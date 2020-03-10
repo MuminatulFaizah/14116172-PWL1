@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-w idth, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/latihan1.css"> 
+</head>
+<body>
+	{%include "navigasi.njk" %}
+	<section>
+		{{content | safe}}
+	</section>
+
+	<div class="jam">
+	    <div class="kotak">
+	      <p id="jam"></p>
+	    </div>
+	    <div class="kotak">
+	      <p id="menit"></p>
+	    </div>
+	    <div class="kotak">
+	      <p id="detik"></p>
+	    </div>
+	</div>
+
+	<script>
+		window.setTimeout("waktu()", 1000);
+
+		function waktu() {
+		var waktu = new Date();
+		var jam = waktu.getHours();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+
+			if(jam >= 20 ){
+			  document.documentElement.setAttribute('data-theme', 'dark')
+			}else{
+			   document.documentElement.setAttribute('data-theme', 'light')
+			}
+		}
+    </script>
+</body>
+</html>

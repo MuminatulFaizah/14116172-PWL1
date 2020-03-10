@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-w idth, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/latihan1.css"> 
+</head>
+<body>
+	<nav>
+	<ul>
+		<li>
+			<a href="/">
+				Home
+			</a>
+		</li>
+		<li>
+			<a href="/tentang/14116172">
+				Profile
+			</a>
+		</li>
+		<li>
+			<a href="/galeri/14116172">
+				Gallery
+			</a>
+		</li>
+	</ul>
+</nav>
+	<section>
+		<h1>Profile</h1>
+<div class="box-profile">
+	<a href="#"><img src="/assets/profil.jpg" class="img-bio"></a>
+	<br>
+	<div class="info">
+		<p> Nama = Mu&#39;minatul Faizah </p>
+		<p> NIM = 14116172 </p>
+		<p>Tempat Tanggal Lahir = Poncowarno, 25 - 11 - 1998</p>
+		<p>Alamat = Lampung Tengah</p>
+		<p>Program Studi = Teknik Informatika</p>
+		<p>Jurusan = Jurusan Teknologi Produksi dan Industri</p>
+		<p>Kampus = Institut Teknologi Sumatera</p>	
+	</div>
+</div>
+
+	</section>
+
+	<div class="jam">
+	    <div class="kotak">
+	      <p id="jam"></p>
+	    </div>
+	    <div class="kotak">
+	      <p id="menit"></p>
+	    </div>
+	    <div class="kotak">
+	      <p id="detik"></p>
+	    </div>
+	</div>
+
+	<script>
+		window.setTimeout("waktu()", 1000);
+
+		function waktu() {
+		var waktu = new Date();
+		var jam = waktu.getHours();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+
+			if(jam >= 20 ){
+			  document.documentElement.setAttribute('data-theme', 'dark')
+			}else{
+			   document.documentElement.setAttribute('data-theme', 'light')
+			}
+		}
+    </script>
+</body>
+</html>
